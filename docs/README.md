@@ -8,8 +8,32 @@ A simple CLI-based task management tool written in Bash.
 - Bash shell
 - SQLite3
 
+## Help
+Access help before running Makefile:
+```bash
+cd setup
+make help
+```
+
+## Test
+Test the tool (before setup):
+
+```bash
+cd setup
+make test
+```
+
 ## Setup
 Before running the tool, set up the environment:
 
 ```bash
+cd setup
 make setup
+```
+
+## Clean
+Clean the logs and data folder:
+```bash
+cd setup
+make clean
+```
