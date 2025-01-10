@@ -1,7 +1,6 @@
 #!/bin/bash
 
 LOG_DIR="../logs"
-ls ../logs
 
 log_message() {
 	local log_level="$1"
