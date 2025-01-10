@@ -13,9 +13,10 @@ add_task() {
 	local due_date="${4:-NULL}"
 	local status="${5:-Pending}"
 
-	echo "DEBUG: Title=$title, Description=$description, Priority=$priority, Due=$duedate, Status=$status"
+	log_info "Attempting to add task: Title=$title, Description=$description, Priority=$priority, Due Date=$due_date, Status=$status"
 
 	if [[ -z "$title" ]]; then
+		log_error "Failed to add task: Title is empty."
 		echo "ERROR: Task title cannot be empty." >&2
 		return 1
 	fi
@@ -23,8 +24,10 @@ add_task() {
 	sqlite3 "$DB_PATH" "INSERT INTO tasks (title, description, priority, due_date, status, created_at) VALUES ('$title', '$description', '$priority', '$due_date', '$status', datetime('now'));" 
 
 	if [[ $? -eq 0 ]]; then
+		log_info "Task added successfully: $title"
 		echo "$title task added."
 	else
+		log_error "Failed to add task: SQLite insertion error."
 		echo "Failed to add task. Check logs/tasks.logs" >&2
 	fi
 }
