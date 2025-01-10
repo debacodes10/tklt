@@ -9,7 +9,7 @@ run:
 	@bash ./../bin/tasks.sh
 
 clean:
-	rm -rf ./data/*.db ./logs/*.log
+	rm -rf ../data/*.db ../logs/*.log
 
 help:
 	@echo "Makefile commands:"
