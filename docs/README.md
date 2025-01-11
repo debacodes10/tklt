@@ -31,7 +31,14 @@ cd setup
 make setup
 ```
 
-## Running the tool
+## TKLT Help
+Running help for command defintions and usage:
+```bash
+cd bin
+./tasks.sh help
+```
+
+## Running TKLT 
 Running the script manually:
 ```bash
 cd bin
