@@ -1,5 +1,7 @@
 # Task Management Tool (TKLT)
 
+![Task Management Tool - TKLT](../assets/readme_logo.jpeg)
+
 ## Overview
 **TKLT** (Task Management Tool) is a simple, CLI-based task management tool built using Bash and SQLite3. This tool allows users to efficiently manage tasks with the ability to add, list, update, delete, search, and filter tasks from a local SQLite database. The tool provides an easy-to-use command-line interface to organize tasks with essential attributes like title, description, priority, due date, and status.
 
